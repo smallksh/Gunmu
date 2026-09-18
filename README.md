@@ -48,4 +48,4 @@ find_user(2).match(
 
 ## License
 
-MIT
+MIT License © 2026 smallksh
