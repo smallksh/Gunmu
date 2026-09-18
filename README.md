@@ -1,5 +1,9 @@
 # 滚木
 
+[![python](https://github.com/smallksh/Gunmu/actions/workflows/python.yml/badge.svg)](https://github.com/smallksh/Gunmu/actions/workflows/python.yml)
+[![typescript](https://github.com/smallksh/Gunmu/actions/workflows/typescript.yml/badge.svg)](https://github.com/smallksh/Gunmu/actions/workflows/typescript.yml)
+
+
 > 显式空值处理。滚木 = 值不存在。
 
 ## 语言
