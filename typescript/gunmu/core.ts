@@ -5,6 +5,8 @@
  * 当你拿到一个 Gunmu，你必须处理它，不能假装它不存在。
  */
 
+import { recordNothing } from "./trace.js";
+
 export interface Some<T> {
   readonly kind: "some";
   readonly value: T;
@@ -25,10 +27,12 @@ export function some<T>(value: T): Some<T> {
 }
 
 export function nothing(reason = "滚木"): Nothing {
+  const origin = callerLocation();
+  recordNothing(reason, origin);
   return {
     kind: "nothing",
     reason,
-    origin: callerLocation(),
+    origin,
   };
 }
 

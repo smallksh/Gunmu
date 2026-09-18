@@ -6,3 +6,5 @@ build/
 dist/
 .venv/
 venv/
+node_modules/
+dist/
