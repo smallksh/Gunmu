@@ -11,6 +11,13 @@ def test_some_basic():
     assert bool(g) is True
 
 
+def test_some_none_is_valid_value():
+    result = some(None)
+
+    assert result.is_some()
+    assert result.unwrap() is None
+
+
 def test_nothing_basic():
     g = nothing("用户不存在")
     assert g.is_nothing()
@@ -79,6 +86,13 @@ def test_iter():
 def test_from_optional():
     assert from_optional(1).unwrap() == 1
     assert from_optional(None, "没查到").reason() == "没查到"
+
+
+def test_from_optional_none_is_nothing():
+    result = from_optional(None, "没有值")
+
+    assert result.is_nothing()
+    assert result.reason() == "没有值"
 
 
 def test_repr():
